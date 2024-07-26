@@ -92,8 +92,12 @@ body {
     margin-top: -15px;
 }
 
-.card,.searchBar,.searchBar button,.weather,.details,.humidity,.wind{
+.card,.searchBar,.searchBar button,.weather,.details,.humidity,.wind,.city{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.weather,.details{
+    display: none;
 }
