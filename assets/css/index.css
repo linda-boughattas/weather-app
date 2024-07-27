@@ -54,6 +54,10 @@ body {
     flex-direction: column;
     margin: 25px;
 }
+.weather-icon{
+    width:250px;
+    height: 250px;
+}
 
 .temperature {
     font-size: 80px;

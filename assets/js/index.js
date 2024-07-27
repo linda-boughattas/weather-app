@@ -9,6 +9,10 @@ async function checkWeather(city){
     const response = await fetch( apiURL +`&q=${city}` + `&appid=${apiKey}`)
     let data = await response.json()
 
+    if (response.status == 404){
+        alert ("invalid city name")
+    }
+
     console.log(data)
 
     document.querySelector(".temperature").innerHTML= Math.round(data.main.temp) + "°C"
@@ -33,6 +37,13 @@ async function checkWeather(city){
     document.querySelector(".weather").style.display="block"
     document.querySelector(".details").style.display="block"
 }
+
+searchBar.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault() //prevent submitting and reloading the page 
+      searchBtn.click()
+    }
+})
 
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBar.value)
