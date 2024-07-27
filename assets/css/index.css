@@ -52,7 +52,7 @@ body {
 }
 .weather{
     flex-direction: column;
-    margin: 25px;
+    margin: 10px;
 }
 .weather-icon{
     width:250px;
